@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+/*Fonts*/
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*Body*/
+body {
+    background-color: rgb(4, 5, 15) ;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 1.6;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* PRINCIPAL CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(4, 5, 15);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(19, 21, 37);
+    padding: 30px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border: 5px solid rgb(32, 226, 200);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(32, 226, 200, 0.30);
+}
+
+.header-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/*HEADER NAME*/
+#name {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 60px);
+    color: rgb(245, 245, 245);
+    padding: 0px;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+/*HEADER PROFESION*/
+#profession {
+    font-family: "JetBrains Mono", monospace;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: rgb(245, 245, 245);
+    padding: 0px;
+}
+
+/*PROFESION ANIMATION*/
+#profession::after {
+    content: "_";
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/*LINKS ICONS*/
+#links {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.linksicons {
+    width: clamp(28px, 5vw, 35px);
+    height: clamp(28px, 5vw, 35px);
+    color: rgb(0, 255, 234);
+}
+
+/*LINKS ANIMATION*/
+a, .linksicons {
+    transition: all 0.3s ease;
+}
+
+.linksicons:hover {
+    transform: scale(1.1);
+}
+
+/*DRAG KILLER*/
+img {
+    -webkit-user-drag: none;
+    user-select: none;   
+}
+
+/*PROFILE PICTURE*/
+#photo {
+    width: clamp(120px, 30vw, 230px);
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+/* TITLES */
+.titles {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 28px);
+    text-align: center;
+    margin: 50px 0 5px 0;
+    color: rgb(245, 245, 245);
+    background: rgb(19, 21, 37);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+/*SUBTITLES*/
+.subtitles{
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 22px);
+    text-align: center;
+    padding: 15px;
+    border: 2px solid rgb(101, 243, 120);
+    border-radius: 10px;
+}
+
+.project_name {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: clamp(18px, 1.5vw, 22px);
+}
+
+.names {
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* TWO COLUMNS */
+.two-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.two-columns > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* THREE COLUMNS */
+.three-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.three-columns p {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* TEXT BLOCKS */
+.academic_islands,
+.certifications_islands {
+    padding: 10px;
+    border-bottom: 5px solid;
+}
+
+.contacts {
+    padding: 15px;
+    border-bottom: 5px solid;
+}
+
+.skills {
+    text-align:justify;
+    padding-left: clamp(45px, 5vw, 50px);
+    padding-right: clamp(30px, 3vw, 40px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid;  
+}
+
+#about, #info,
+.projects {
+    padding: 20px;
+    border-bottom: 5px solid;
+}
+
+/*TEXT ALIGN SECTION*/
+#info, .contacts, .academic_islands,
+.certifications_islands { text-align: center; }
+#about, .projects { text-align: justify; }
+
+/*GENERIC CLASS*/
+.generic {
+    background-color: black;
+    color: rgb(245, 245, 245);
+    border-radius: 5px;
+}
+
+/* SECTION COLORS */
+.skills { border-color: rgb(147, 112, 216); }
+.projects { border: 5px solid rgb(0, 250, 154); 
+            box-shadow: 0 0 10px rgba(0, 255, 127, 0.2); }
+.academic_islands { border-color: rgb(72, 209, 204); }
+.certifications_islands { border-color: rgb(60, 179, 113); }
+.contacts { border-color: rgb(235, 238, 64); }
+#about { border-color: rgb(186, 85, 211); }
+#info { border-color: rgb(95, 158, 160); }
+
+/*CONTACT COPY*/
+.copy {
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+/*COPY HOVER AND ANIMATION*/
+.copy:hover {
+    color: rgb(126, 218, 221);
+}
+
+.copy:hover::after {
+    content: "click para copiar";
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+/* FOOTER */
+footer {
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+/*COPIED MESSAGE*/
+#toast {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(19, 21, 37);
+    color: rgb(245, 245, 245);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(32, 226, 200);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/*MOBILE HEADER DESIGN*/
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #photo {
+        order: 1;
+        width: 150px;
+    }
+
+    .header-text {
+        order: 2;
+    }
+
+    #links {
+        order: 3;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
