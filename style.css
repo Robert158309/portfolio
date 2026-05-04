@@ -37,13 +37,13 @@
     --bg-main: #04050f;
     --bg-secondary: #131525;
     --bg-card: #000000;
-    --bg-soft: #1315252d;
+    --bg-soft: #13152591;
     /* TEXT */
     --text-main: #f5f5f5;
     /* ACCENTS */
     --accent-primary: #20e2c8;
-    --accent-links: #00ffea;
-    --accent-hover: #7edadd;
+    --accent-links: #72bed1f1;
+    --accent-hover: #88acac;
     --accent-badges-link: #2fa4e7;
     /* BORDERS (sections) */
     --border-subtitles: #65f378;
@@ -71,8 +71,17 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     -webkit-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* SELECTION ON */
+.projects {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 /* PRINCIPAL CONTAINER */
@@ -80,7 +89,6 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    background-color: var(--bg-main);
 }
 
 /* HEADER */
@@ -156,12 +164,6 @@ a, .linksicons {
     transform: scale(1.1);
 }
 
-/* DRAG KILLER */
-img {
-    -webkit-user-drag: none;
-    user-select: none;   
-}
-
 /* PROFILE PICTURE */
 #photo {
     width: clamp(120px, 30vw, 230px);
@@ -212,7 +214,7 @@ img {
     flex-wrap: wrap;
 }
 
-.two-columns > div {
+.two-columns > * {
     flex: 1;
     min-width: 300px;
 }
@@ -224,7 +226,7 @@ img {
     flex-wrap: wrap;
 }
 
-.three-columns p {
+.three-columns > * {
     flex: 1;
     min-width: 250px;
 }
@@ -234,6 +236,7 @@ img {
 .certifications_islands {
     padding: 10px;
     border-bottom: 5px solid;
+    margin: 20px 0 0 0;
 }
 
 .contacts {
@@ -254,6 +257,7 @@ img {
 .projects {
     padding: 20px;
     border-bottom: 5px solid;
+    margin: 20px 0 10px 0;
 }
 
 /* BADGES SECTION */
@@ -265,13 +269,14 @@ img {
     background-color: var(--bg-soft);
     border-radius: 5px 5px 0 0;
     padding: 10px;
+    margin: 15px 0 0 0;
 }
 
 .badges-card {
-    width: 120px;
+    width: clamp(90px, 10vw, 160px);
     border-radius: 10px;
     transition: 0.3s;
-    margin: 15px 0 15px 0;
+    margin: 15px 0;
 }
 
 .badges-card img {
@@ -346,17 +351,7 @@ img {
 /* COPY HOVER AND ANIMATION */
 .copy:hover {
     color: var(--accent-hover);
-}
-
-.copy:hover::after {
-    content: "click para copiar";
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px;
-    opacity: 0.6;
-    white-space: nowrap;
+    box-shadow: 0 0 0 2px var(--accent-hover);
 }
 
 /* FOOTER */
@@ -383,6 +378,15 @@ footer {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* MOBILE HEADER DESIGN */
