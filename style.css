@@ -216,7 +216,7 @@ a, .linksicons {
 
 .two-columns > * {
     flex: 1;
-    min-width: 300px;
+    min-width: 320px;
 }
 
 /* THREE COLUMNS */
@@ -265,7 +265,7 @@ a, .linksicons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     background-color: var(--bg-soft);
     border-radius: 5px 5px 0 0;
     padding: 10px;

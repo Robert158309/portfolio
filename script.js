@@ -1,6 +1,11 @@
-const text = "Desarrollador Web Junior";
+const texts = [
+    "Desarrollador Web Junior",
+    "Técnico en Informática"
+];
 const animation = document.getElementById("profession");
-let i = 0;
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
 const toast = document.getElementById("toast");
 const images = document.querySelectorAll("img");
@@ -20,12 +25,28 @@ const speed = isMobile ? 0.5 : 1.2;
 /* PROFESSION TYPE EFFECT */
 function typeEffect() {
 
-    if (i < text.length) {
-        animation.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 60);
+    const currentText = texts[textIndex];
+
+    if (!isDeleting) {
+        animation.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 5000);
+            return;
+        }
+    } else {
+        animation.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
     }
 
+    setTimeout(typeEffect, isDeleting ? 30 : 60);
 }
 
 /* DRAG KILLER */
@@ -109,6 +130,11 @@ window.addEventListener("resize", () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    particles.forEach(p => {
+        p.x = Math.random() * canvas.width;
+        p.y = Math.random() * canvas.height;
+    });
 
 });
 
