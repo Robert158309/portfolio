@@ -5,12 +5,14 @@
     font-family: 'JetBrains Mono';
     src: url('assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('assets/fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-display: swap;
 }
 
 @font-face {
@@ -18,17 +20,20 @@
     src: url('assets/fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter';
     src: url('assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter';
     src: url('assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
     font-style: italic;
+    font-display: swap;
 }
 
 /* COLORS */
@@ -61,6 +66,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* BODY */
@@ -76,19 +83,10 @@ body {
     user-select: none;
 }
 
-/* SELECTION ON */
-.projects {
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-}
-
 /* PRINCIPAL CONTAINER */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width: min(90%, 1200px);
+    margin-inline: auto;
 }
 
 /* HEADER */
@@ -96,7 +94,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-secondary);
-    padding: 30px;
+    padding: 40px;
     flex-direction: row;
     align-items: center;
     gap: 20px;
@@ -118,7 +116,7 @@ body {
     font-weight: 800;
     font-size: clamp(36px, 5vw, 60px);
     padding: 0px;
-    margin-top: 10px;
+    margin-bottom: 30px;
     line-height: 1.2;
 }
 
@@ -129,6 +127,7 @@ body {
     font-weight: 600;
     font-size: clamp(18px, 2.5vw, 26px);
     padding: 0px;
+    margin-bottom: 20px;
 }
 
 /* PROFESION ANIMATION */
@@ -178,7 +177,7 @@ a, .linksicons {
     font-weight: 600;
     font-size: clamp(18px, 3vw, 28px);
     text-align: center;
-    margin: 50px 0 5px 0;
+    margin-bottom: 20px;
     background: var(--bg-secondary);
     padding: 10px;
     border-radius: 7px;
@@ -191,6 +190,7 @@ a, .linksicons {
     font-size: clamp(16px, 2vw, 22px);
     text-align: center;
     padding: 15px;
+    margin-bottom: 15px;
     border: 2px solid var(--border-subtitles);
     border-radius: 10px;
 }
@@ -205,6 +205,12 @@ a, .linksicons {
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* SECTIONS SEPARATION */
+.section {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 /* TWO COLUMNS */
@@ -232,15 +238,10 @@ a, .linksicons {
 }
 
 /* TEXT BLOCKS */
+.contacts,
 .academic_islands,
 .certifications_islands {
     padding: 10px;
-    border-bottom: 5px solid;
-    margin: 20px 0 0 0;
-}
-
-.contacts {
-    padding: 15px;
     border-bottom: 5px solid;
 }
 
@@ -248,16 +249,25 @@ a, .linksicons {
     text-align:justify;
     padding-left: clamp(45px, 5vw, 50px);
     padding-right: clamp(30px, 3vw, 40px);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-bottom: 5px solid;  
 }
 
-#about, #info,
-.projects {
+#about, 
+#info {
     padding: 20px;
     border-bottom: 5px solid;
-    margin: 20px 0 10px 0;
+}
+
+.projects {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-bottom: 5px solid;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 /* BADGES SECTION */
@@ -269,7 +279,7 @@ a, .linksicons {
     background-color: var(--bg-soft);
     border-radius: 5px 5px 0 0;
     padding: 10px;
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .badges-card {
@@ -401,6 +411,7 @@ footer {
     #photo {
         order: 1;
         width: 150px;
+        margin-bottom: 20px;
     }
 
     .header-text {
