@@ -246,7 +246,7 @@ a, .linksicons {
 }
 
 .skills {
-    text-align:justify;
+    text-align: left;
     padding-left: clamp(45px, 5vw, 50px);
     padding-right: clamp(30px, 3vw, 40px);
     padding-top: 20px;
@@ -260,6 +260,7 @@ a, .linksicons {
     border-bottom: 5px solid;
 }
 
+/* PROJECTS SECTION */
 .projects {
     padding: 20px;
     margin-bottom: 15px;
@@ -268,6 +269,15 @@ a, .linksicons {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+}
+
+.project_footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--bg-soft);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /* BADGES SECTION */
@@ -307,6 +317,8 @@ a, .linksicons {
     border-bottom: 5px solid;
 }
 
+/* SECTIONS FOOTERS CONFIG */
+.project_footer a,
 .badges-footer a {
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
@@ -316,6 +328,7 @@ a, .linksicons {
     transition: 0.3s;
 }
 
+.project_footer a:hover,
 .badges-footer a:hover {
     opacity: 1;
     text-decoration: underline;
@@ -364,8 +377,8 @@ a, .linksicons {
     box-shadow: 0 0 0 2px var(--accent-hover);
 }
 
-/* FOOTER */
-footer {
+/* FOOTER PAGE */
+#page_footer {
     width: 100%;
     font-weight: 600;
     font-family: "JetBrains Mono", monospace;
