@@ -376,13 +376,23 @@ a, .linksicons {
 .project_footer a,
 .badges-footer a {
     font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
+    font-size: clamp(12px, 0.9rem + 0.2vw, 14px);
     color: var(--accent-badges-link);
     text-decoration: none;
     opacity: 0.8;
     transition: 0.3s;
 }
 
+.contacts {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(14px, 1.2vw, 18px);
+    color: var(--accent-links);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.contacts:hover,
 .project_footer a:hover,
 .badges-footer a:hover {
     opacity: 1;
