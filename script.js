@@ -17,12 +17,11 @@ const particleColor = "#ffffffdb";
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles = [];
+let animationId;
 /* ---------------------------------------------------------------- */
 const isMobile = window.innerWidth < 768;
 const PARTICLE_COUNT = isMobile ? 20 : 45;
 const speed = isMobile ? 0.2 : 0.4;
-/* ---------------------------------------------------------------- */
-let animationRunning = true;
 
 /* PROFESSION TYPE EFFECT */
 function typeEffect() {
@@ -150,10 +149,7 @@ function animateParticles() {
             }
         }
     }
-
-    if (animationRunning) {
-        requestAnimationFrame(animateParticles);
-    }
+        animationId = requestAnimationFrame(animateParticles);
 }
 
 /* CANVAS SIZE */
@@ -173,9 +169,8 @@ window.addEventListener("resize", () => {
 document.addEventListener("visibilitychange", () => {
 
     if (document.hidden) {
-        animationRunning = false;
+        cancelAnimationFrame(animationId);
     } else {
-        animationRunning = true;
         animateParticles();
     }
 
