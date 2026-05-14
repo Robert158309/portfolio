@@ -260,6 +260,61 @@ a, .linksicons {
     border-bottom: 5px solid;
 }
 
+/* SKILLS MARQUEE */
+.skills-rail {
+    overflow: hidden;
+    padding: 25px 0 10px 0;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        white 10%,
+        white 90%,
+        transparent
+    );
+}
+
+.skills-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
+.skills-group {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 6rem);
+    padding-right: clamp(2rem, 5vw, 6rem);
+}
+
+.skills-icon {
+    width: clamp(40px, 5vw, 60px);
+    object-fit: contain;
+    flex-shrink: 0;
+    transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.skills-icon:hover {
+    transform: translateY(-4px) scale(1.08);
+    filter:
+        drop-shadow(0 0 6px rgba(255,255,255,0.25));
+    opacity: 1;
+}
+
+/* SKILLS ANIMATION */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* PROJECTS SECTION */
 .projects {
     padding: 20px;
@@ -293,7 +348,7 @@ a, .linksicons {
 }
 
 .badges-card {
-    width: clamp(90px, 10vw, 160px);
+    width: clamp(80px, 10vw, 150px);
     border-radius: 10px;
     transition: 0.3s;
     margin: 15px 0;
@@ -474,4 +529,8 @@ a, .linksicons {
     .container {
         width: 95%;
     }
+}
+
+.paused * {
+    animation-play-state: paused !important;
 }
