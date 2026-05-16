@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* FONTS */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-style: italic;
+    font-display: swap;
+}
+
+/* COLORS */
+:root {
+    /* BACKGROUNDS */
+    --bg-main: #04050f;
+    --bg-secondary: #131525;
+    --bg-card: #000000;
+    --bg-soft: #1315256e;
+    /* TEXT */
+    --text-main: #f5f5f5;
+    /* ACCENTS */
+    --accent-primary: #20e2c8;
+    --accent-links: #72bed1f1;
+    --accent-hover: #88acac;
+    --accent-badges-link: #2fa4e7;
+    /* BORDERS (sections) */
+    --border-subtitles: #65f378;
+    --border-skills: #9370d8;
+    --border-projects: #00fa9a;
+    --border-academic: #48d1cc;
+    --border-certifications: #3cb371;
+    --border-contacts: #ebee40;
+    --border-about: #ba55d3;
+    --border-info: #5f9ea0;
+    /* EFFECTS */
+    --shadow-primary: #20e2c84d;
+    --shadow-projects: #00ff7f33;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body {
+    background-color: var(--bg-main);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* PRINCIPAL CONTAINER */
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+/* GENERIC CLASS */
+.generic {
+    background-color: var(--bg-card);
+    border-radius: 5px;
+}
+
+/* SECTIONS SEPARATION */
+.section {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

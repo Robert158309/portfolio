@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border: 5px solid var(--accent-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--shadow-primary);
+}
+
+.header-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/*HEADER NAME*/
+#name {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 60px);
+    padding: 0px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* HEADER PROFESION */
+#profession {
+    font-family: "JetBrains Mono", monospace;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(18px, 2.5vw, 26px);
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+/* PROFESION ANIMATION */
+#profession::after {
+    content: "_";
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* LINKS ICONS */
+#links {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.linksicons {
+    width: clamp(28px, 5vw, 35px);
+    height: clamp(28px, 5vw, 35px);
+    color: var(--accent-links);
+}
+
+/* LINKS ANIMATION */
+a, .linksicons {
+    transition: all 0.3s ease;
+}
+
+.linksicons:hover {
+    transform: scale(1.1);
+}
+
+/* PROFILE PICTURE */
+#photo {
+    width: clamp(120px, 30vw, 230px);
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+/* TITLES */
+.titles {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 28px);
+    text-align: center;
+    margin-bottom: 20px;
+    background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+/* SUBTITLES */
+.subtitles{
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 22px);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid var(--border-subtitles);
+    border-radius: 10px;
+}
+
+/* FOOTER PAGE */
+#page_footer {
+    width: 100%;
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: clamp(10px, 2vw, 16px);
+    background-color: var(--bg-soft);
+}
