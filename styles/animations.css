@@ -1,4 +1,4 @@
-@charset "UFF-8";
+@charset "UTF-8";
 
 /* SKILLS MARQUEE */
 .skills-rail {
@@ -17,8 +17,16 @@
 .skills-track {
     display: flex;
     width: max-content;
-    animation: scroll 30s linear infinite;
     will-change: transform;
+}
+
+.track-left {
+    animation: scroll-left 30s linear infinite;
+}
+
+.track-right {
+    margin: 50px 0 0 0;
+    animation: scroll-right 30s linear infinite;
 }
 
 .skills-group {
@@ -39,20 +47,20 @@
 }
 
 .skills-icon:hover {
-    transform: translateY(-4px) scale(1.08);
     filter:
         drop-shadow(0 0 6px rgba(255,255,255,0.25));
     opacity: 1;
 }
 
 /* SKILLS ANIMATION */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
 }
 
 /* PARTICLES BACKGROUND ANIMATION */
@@ -63,6 +71,85 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* NAVBAR ACTIVE SECTION ANIMATION */
+.navbar a.active {
+    color: var(--accent-primary);
+    background-color: rgba(32, 226, 200, 0.12);
+    border-color: rgba(32, 226, 200, 0.3);
+    box-shadow: 0 0 15px rgba(32, 226, 200, 0.25);
+}
+
+/* BUTTON */
+#snake-toggle {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#snake-toggle:hover {
+    background-color: var(--bg-soft);
+}
+
+/* GAME CONTAINER */
+#snake-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #000;
+    position: relative;
+}
+
+/* ACTIVE */
+#snake-container.active {
+    display: block;
+}
+
+/* SNAKE TITLE */
+.snake-title {
+    margin-bottom: 15px;
+    color: var(--accent-primary);
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* CANVAS GAME */
+#snake-game {
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    border: 2px solid var(--accent-primary);
+}
+
+/* GAME OVER SCREEN */
+#game-over {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    color: var(--accent-primary);
+    font-family: "JetBrains Mono", monospace;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+#game-over button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--accent-primary);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN FOR GAME ON MOBILE*/
+@media (max-width: 768px) {
+    #snake-container {
+        display: none;
+    }
 }
 
 /* MOBILE HEADER DESIGN */

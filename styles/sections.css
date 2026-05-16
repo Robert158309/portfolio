@@ -60,7 +60,7 @@
 .contacts,
 .academic_islands,
 .certifications_islands {
-    padding: 10px;
+    padding: 15px;
     border-bottom: 5px solid;
 }
 
@@ -73,10 +73,25 @@
     border-bottom: 5px solid;  
 }
 
-#about, 
-#info {
+#about { 
     padding: 20px;
+    border-bottom: 5px solid; 
+}
+
+#info {
+    padding: 30px;
+    line-height: 2.2;
+    gap: 10px;
     border-bottom: 5px solid;
+}
+
+.contacts {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(14px, 1.2vw, 18px);
+    color: var(--accent-links);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
 }
 
 /* BADGES SECTION */
@@ -127,15 +142,6 @@
     transition: 0.3s;
 }
 
-.contacts {
-    font-family: "JetBrains Mono", monospace;
-    font-size: clamp(14px, 1.2vw, 18px);
-    color: var(--accent-links);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
 .contacts:hover,
 .project_footer a:hover,
 .badges-footer a:hover {
@@ -144,9 +150,9 @@
 }
 
 /* TEXT ALIGN SECTION */
-#info, .contacts, .academic_islands,
+.contacts, .academic_islands,
 .certifications_islands { text-align: center; }
-#about, .projects { text-align: justify; }
+#info, #about, .projects { text-align: justify; }
 
 /* SECTION COLORS */
 .skills { border-color: var(--border-skills); }
@@ -166,3 +172,19 @@
 #about { border-color: var(--border-about); }
 
 #info { border-color: var(--border-info); }
+
+/* CONTACT MESSAGE */
+.contact-message {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.3vw, 17px);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding: 18px;
+    background-color: var(--bg-soft);
+    border: 1px solid var(--accent-primary);
+    border-radius: 12px;
+    opacity: 0.95;
+    backdrop-filter: blur(8px);
+}

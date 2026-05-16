@@ -1,23 +1,23 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 /* FONTS */
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    src: url('../assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('assets/fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    src: url('../assets/fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('assets/fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+    src: url('../assets/fonts/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -25,13 +25,13 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    src: url('../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
     font-style: italic;
     font-display: swap;
 }
@@ -62,6 +62,10 @@
     /* EFFECTS */
     --shadow-primary: #20e2c84d;
     --shadow-projects: #00ff7f33;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -99,4 +103,5 @@ body {
 .section {
     margin-top: 50px;
     margin-bottom: 20px;
+    scroll-margin-top: 100px;
 }

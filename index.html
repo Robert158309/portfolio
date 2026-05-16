@@ -26,23 +26,38 @@
 
         <title>Perfil - Roberto</title>
 
-        <link rel = "preload" as = "image" href = "assets/img/photo.webp">
+        <link rel = "preload" as = "image" href = "assets/img/photo.webp" as = "image">
 
         <link rel = "stylesheet" type = "text/css" href = "styles/base.css">
         <link rel = "stylesheet" type = "text/css" href = "styles/layout.css">
         <link rel = "stylesheet" type = "text/css" href = "styles/sections.css">
         <link rel = "stylesheet" type = "text/css" href = "styles/components.css">
         <link rel = "stylesheet" type = "text/css" href = "styles/animations.css">
+
         <link rel = "icon" type = "image/png" href = "assets/img/user-icon.png">
-        
         <link rel = "canonical" href = "https://robert158309.github.io/Portafolio/">
 
-        <script src = "script.js" defer></script>
+        <script type = "module" src = "js/main.js"></script>
 
     </head>
 
     <!-- BODY PAGE -->
-    <body>
+    <body id = "home">
+
+        <!-- SCROLL PROGRESS BAR -->
+        <div id = "scroll-progress"></div>
+
+        <!-- NAVBAR -->
+        <nav class = "navbar container">
+
+            <a href = "#home" class="nav-link">Inicio</a>
+            <a href = "#skills" class="nav-link">Habilidades</a>
+            <a href = "#projects" class="nav-link">Proyectos</a>
+            <a href = "#certifications" class="nav-link">Certificaciones</a>
+            <a href = "#about-section" class="nav-link">Acerca De</a>
+            <a href = "#contact-section" class="nav-link">Contacto</a>
+
+        </nav>
 
         <!-- HEADER SECTION -->
         <header class = "header container">
@@ -53,7 +68,7 @@
                         
                 <h3 id = "profession"></h3>
 
-                <nav id = "links">
+                <div id = "links">
 
                     <a href = "https://github.com/Robert158309" target = "_blank" rel = "noopener noreferrer" aria-label = "GitHub" title = "Ver Github">
                         <img src = "assets/img/skill-icons--github-dark.svg" alt = "GitHub Logo" class = "linksicons">
@@ -67,7 +82,7 @@
                         <img src = "assets/img/skill-icons--instagram.svg" alt = "Instagram Logo" class = "linksicons">
                     </a>
 
-                </nav>
+                </div>
 
             </section>
 
@@ -79,13 +94,49 @@
         <main class = "container">
 
             <!-- SKILLS -->
-            <section class = "section">
+            <section id = "skills" class = "section">
 
                 <h2 class = "titles">Tecnologías y Herramientas</h2>
 
                 <section class = "skills-rail">
 
-                    <div class = "skills-track" id = "skillsTrack">
+                    <div class = "skills-track track-left">
+
+                        <div class = "skills-group">
+
+                            <img src = "assets/img/skill-icons--cpp.svg" alt = "C++ Logo" class = "skills-icon" title = "C++">
+                            <img src = "assets/img/skill-icons--cs.svg" alt = "C# Logo" class = "skills-icon" title = "C#">
+                            <img src = "assets/img/skill-icons--java-dark.svg" alt = "Java Logo" class = "skills-icon" title = "Java">
+                            <img src = "assets/img/skill-icons--html.svg" alt = "HTML Logo" class = "skills-icon" title = "HTML">
+                            <img src = "assets/img/skill-icons--css.svg" alt = "CSS Logo" class = "skills-icon" title = "CSS">
+                            <img src = "assets/img/skill-icons--javascript.svg" alt = "JavaScript Logo" class = "skills-icon" title = "JavaScript">
+                            <img src = "assets/img/skill-icons--git.svg" alt = "Git Logo" class = "skills-icon" title = "Git">
+                            <img src = "assets/img/skill-icons--mysql-dark.svg" alt = "MySQL Logo" class = "skills-icon" title = "MySQL">
+                            <img src = "assets/img/skill-icons--visualstudio-dark.svg" alt = "Visual Studio Logo" class = "skills-icon" title = "Visual Studio">
+                            <img src = "assets/img/skill-icons--vscode-dark.svg" alt = "Visual Studio Code Logo" class = "skills-icon" title = "Visual Studio Code">
+                            <img src = "assets/img/skill-icons--idea-dark.svg" alt = "IDEA Logo" class = "skills-icon" title = "Intellij IDEA">
+ 
+                        </div>
+
+                        <div class = "skills-group">
+
+                            <img src = "assets/img/skill-icons--cpp.svg" alt = "C++ Logo" class = "skills-icon" title = "C++">
+                            <img src = "assets/img/skill-icons--cs.svg" alt = "C# Logo" class = "skills-icon" title = "C#">
+                            <img src = "assets/img/skill-icons--java-dark.svg" alt = "Java Logo" class = "skills-icon" title = "Java">
+                            <img src = "assets/img/skill-icons--html.svg" alt = "HTML Logo" class = "skills-icon" title = "HTML">
+                            <img src = "assets/img/skill-icons--css.svg" alt = "CSS Logo" class = "skills-icon" title = "CSS">
+                            <img src = "assets/img/skill-icons--javascript.svg" alt = "JavaScript Logo" class = "skills-icon" title = "JavaScript">
+                            <img src = "assets/img/skill-icons--git.svg" alt = "Git Logo" class = "skills-icon" title = "Git">
+                            <img src = "assets/img/skill-icons--mysql-dark.svg" alt = "MySQL Logo" class = "skills-icon" title = "MySQL">
+                            <img src = "assets/img/skill-icons--visualstudio-dark.svg" alt = "Visual Studio Logo" class = "skills-icon" title = "Visual Studio">
+                            <img src = "assets/img/skill-icons--vscode-dark.svg" alt = "Visual Studio Code Logo" class = "skills-icon" title = "Visual Studio Code">
+                            <img src = "assets/img/skill-icons--idea-dark.svg" alt = "Intellij IDEA Logo" class = "skills-icon" title = "Intellij IDEA">
+ 
+                        </div>
+
+                    </div>
+
+                    <div class = "skills-track track-right">
 
                         <div class = "skills-group">
 
@@ -126,7 +177,7 @@
             </section>
 
             <!-- PROJECTS -->
-            <section class = "section">
+            <section id = "projects" class = "section">
 
                 <h2 class = "titles">Proyectos Principales</h2>
 
@@ -157,7 +208,7 @@
             </section>
 
             <!-- CERTIFICATIONS -->
-            <section class = "section">
+            <section id = "certifications" class = "section">
 
                 <h2 class = "titles">Certificaciones</h2>
 
@@ -212,7 +263,7 @@
             </footer>
 
             <!-- ACADEMIC -->
-            <section class = "section">
+            <section id = "academic" class = "section">
 
                 <h2 class = "titles">Historial Académico</h2>
 
@@ -240,40 +291,71 @@
                 
 
             <!-- ABOUT -->
-            <section class = "section">
+            <section id = "about-section" class = "section">
 
                 <h2 class = "titles">Sobre mí</h2>
 
-                <article id = "about" class = "generic">
-                    Soy un estudiante responsable, me destaco por mi disciplina, perfeccionismo y compromiso con 
-                    lo que me asignen, por mi creatividad, mi capacidad autodidacta y toda disponibilidad por 
-                    colaborar y trabajar en equipo. Soy un amante de la tecnología, queriendo aumentar mi desarrollo 
-                    académico y personal, siempre busco mejorar y sobresalir en cualquier nuevo reto que se me 
-                    proponga. Además, durante mis tiempos libres disfruto reparar dispositivos y crear proyectos 
-                    pequeños mientras disfruto una taza de café ☕.
-                </article>
+                <section class = "two-columns">
 
-            </section>
+                    <article id = "about" class = "generic">
+                        Soy un estudiante responsable, me destaco por mi disciplina, perfeccionismo y compromiso con 
+                        lo que me asignen, por mi creatividad, mi capacidad autodidacta y toda disponibilidad por 
+                        colaborar y trabajar en equipo. Soy un amante de la tecnología, queriendo aumentar mi desarrollo 
+                        académico y personal, siempre busco mejorar y sobresalir en cualquier nuevo reto que se me 
+                        proponga. Además, durante mis tiempos libres disfruto reparar dispositivos y crear proyectos 
+                        pequeños mientras disfruto una taza de café ☕.
+                    </article>
 
-            <!-- PERSONAL INFO -->
-            <section class = "section">
+                    <article id = "info" class = "generic">
 
-                <h2 class = "titles">Información Personal</h2>
+                        <p>
+                            <strong>Nombre Completo:</strong>
+                            Roberto Gustavo Monzón Gutierrez
+                        </p>
 
-                <article id = "info" class = "generic">
+                        <p>
+                            <strong>Fecha de Nacimiento:</strong>
+                            09 de Mayo, 2008
+                        </p>
 
-                    <strong>Nombre Completo: </strong>Roberto Gustavo Monzón Gutierrez <br>
-                    <strong>Fecha de Nacimiento: </strong>09 de Mayo, 2008 <br>
-                    <strong>País: </strong>Guatemala 🩵🤍🩵
+                        <p>
+                            <strong>Especialidades:</strong>
+                            Desarrollo de Software y Soporte Técnico
+                        </p>
 
-                </article>
+                        <p>
+                            <strong>Idiomas:</strong>
+                            Español Nativo e Inglés Básico
+                        </p>
+
+                        <p>
+                            <strong>Hobbies:</strong>
+                            Videojuegos e ir al gimnasio
+                        </p>
+
+                        <p>
+                            <strong>País:</strong>
+                            Guatemala 🩵🤍🩵
+                        </p>
+
+                    </article>
+
+                </section>
 
             </section>
 
             <!-- CONTACT -->
-            <section class = "section">
+            <section id = "contact-section" class = "section">
 
                 <h2 class = "titles">Contacto</h2>
+
+                <p class ="contact-message">
+                    ¡Estoy abierto a nuevas oportunidades y colaboraciones! 😄<br>
+                    Si tienes un proyecto en mente, ideas que quieras compartir o simplemente quieres charlar sobre tecnología, no dudes en escribirme.
+                    Me gusta conocer nuevas personas del mundo del desarrollo y siempre estoy dispuesto a aprender algo nuevo. <br><br>
+                    Puedes contactarme por correo o redes sociales, y te responderé lo más pronto posible. 💻
+                    
+                </p>
 
                 <section class = "two-columns">
 
@@ -287,23 +369,44 @@
 
                 </section>
 
+                <p class = "contact-message">PD: si tardo en responder, probablemente estoy rompiendo algo de código.</p>
+
             </section>
 
         </main>
 
+        <!-- FOOTER PAGE -->
+        <footer id = "page_footer">
+
+            <p class = "footer-text">
+                Roberto Monzón © 2026 • Hecho con café, bugs y decisiones cuestionables <span id = "snake-toggle">☕</span>
+            </p>
+
+            <div id = "snake-container">
+
+                <p class = "snake-title">
+                    Cafés consumidos: <span id = "coffee-count">0</span> ☕
+                </p>
+
+                <canvas id = "snake-game"></canvas>
+
+                <div id = "game-over">
+                    <h2>Game Over 💀</h2>
+                    <button id = "restart-snake">Reintentar</button>
+                </div>
+
+            </div>
+
+        </footer>
+
         <!-- ELEMENTS -->
-        <div id = "toast">Copiado</div>
+        <div id = "toast"></div>
         <canvas id = "particles"></canvas>
 
         <!-- CV LINK -->
         <a href = "assets/files/CV.pdf" class = "fab" target = "_blank" title = "Ver CV">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class = "linksicons"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005zm-2.5 8a2.5 2.5 0 0 0 -2.5 2.5v3a2.5 2.5 0 1 0 5 0a1 1 0 0 0 -2 0a.5 .5 0 1 1 -1 0v-3a.5 .5 0 1 1 1 0a1 1 0 0 0 2 0a2.5 2.5 0 0 0 -2.5 -2.5m6.743 .03a1 1 0 0 0 -1.213 .727l-.53 2.119l-.53 -2.119a1 1 0 1 0 -1.94 .486l1.5 6c.252 1.01 1.688 1.01 1.94 0l1.5 -6a1 1 0 0 0 -.727 -1.213m-1.244 -7.031l4.001 4.001h-4z" /></svg>
         </a>
-
-        <!-- FOOTER PAGE -->
-        <footer id = "page_footer"> 
-            Roberto Monzón © 2026 • Hecho con café, bugs y decisiones cuestionables
-        </footer>
 
     </body>
 

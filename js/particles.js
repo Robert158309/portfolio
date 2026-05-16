@@ -1,16 +1,3 @@
-const texts = [
-    "Desarrollador Web Junior",
-    "Técnico en Informática"
-];
-const animation = document.getElementById("profession");
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-/* ---------------------------------------------------------------- */
-const toast = document.getElementById("toast");
-const images = document.querySelectorAll("img");
-const copyEls = document.querySelectorAll(".copy");
-/* ---------------------------------------------------------------- */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 const particleColor = "#ffffffdb";
@@ -22,74 +9,7 @@ let animationId;
 const isMobile = window.innerWidth < 768;
 const PARTICLE_COUNT = isMobile ? 20 : 45;
 const speed = isMobile ? 0.2 : 0.4;
-
-/* PROFESSION TYPE EFFECT */
-function typeEffect() {
-
-    const currentText = texts[textIndex];
-
-    if (!isDeleting) {
-        animation.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentText.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 5000);
-            return;
-        }
-    } else {
-        animation.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-        }
-    }
-
-    setTimeout(typeEffect, isDeleting ? 30 : 60);
-}
-
-/* DRAG KILLER */
-images.forEach(img => {
-
-    img.addEventListener("dragstart", e => e.preventDefault());
-    img.setAttribute("draggable", "false");
-
-});
-
-/* COPY FUNCTION */
-copyEls.forEach(el => {
-
-    el.addEventListener("click", () => {
-
-        navigator.clipboard.writeText(el.dataset.copy);
-
-        el.style.color = "#00e1ff";
-
-        showToast("Copiado al Portapapeles ✔️");
-
-        setTimeout(() => {
-
-            el.style.color = "";
-
-        }, 500);
-
-    });
-
-});
-
-/* COPY TOAST */
-function showToast(message) {
-
-    toast.textContent = message;
-    toast.style.opacity = "1";
-
-    setTimeout(() => {
-        toast.style.opacity = "0";
-    }, 1200);
-
-}
+/* ---------------------------------------------------------------- */
 
 /* RANDOM SPAWN */
 for (let c = 0; c < PARTICLE_COUNT; c++) {
@@ -177,4 +97,3 @@ document.addEventListener("visibilitychange", () => {
 });
 
 animateParticles();
-typeEffect();
