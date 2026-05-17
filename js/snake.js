@@ -1,12 +1,7 @@
-document.addEventListener("keydown", (e) => {
-
-    if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) {
-        e.preventDefault();
-    }
-
-});
-
 export function initSnake() {
+
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    if (isMobile) return;
 
     const canvas = document.getElementById("snake-game");
     const ctx = canvas.getContext("2d");
@@ -18,7 +13,11 @@ export function initSnake() {
 
     const box = 15;
 
-    let snake, direction, nextDirection, coffee;
+    let snake = [];
+    let direction = "RIGHT";
+    let nextDirection = "RIGHT";
+    let coffee = null;
+
     let coffeeCount = 0;
     let gameOver = false;
 
@@ -26,7 +25,7 @@ export function initSnake() {
     const speed = 120;
 
     let animationId = null;
-    let running = true;
+    let running = false;
 
     // ---------------------------
     // RESIZE
@@ -53,23 +52,27 @@ export function initSnake() {
     // ---------------------------
     function resetGame() {
 
+        resize();
+
         snake = [{ x: 5 * box, y: 5 * box }];
         direction = "RIGHT";
         nextDirection = "RIGHT";
 
         coffee = spawnCoffee();
+
         coffeeCount = 0;
         coffeeCounter.textContent = coffeeCount;
 
         gameOver = false;
         gameOverScreen.style.display = "none";
 
-        running = true;
-        loop();
+        last = performance.now();
+
+        startLoop();
     }
 
     // ---------------------------
-    // INPUT
+    // INPUT (solo uno)
     // ---------------------------
     window.addEventListener("keydown", (e) => {
 
@@ -86,7 +89,7 @@ export function initSnake() {
     restartBtn?.addEventListener("click", resetGame);
 
     // ---------------------------
-    // DRAW GAME
+    // GAME LOGIC
     // ---------------------------
     function drawGame() {
 
@@ -114,19 +117,20 @@ export function initSnake() {
             coffeeCounter.textContent = coffeeCount;
         }
 
-        snake.unshift(head);
-
-        for (let i = 1; i < snake.length; i++) {
+        // colisión consigo misma
+        for (let i = 0; i < snake.length; i++) {
             if (head.x === snake[i].x && head.y === snake[i].y) {
                 gameOver = true;
                 gameOverScreen.style.display = "flex";
+                stopLoop();
                 return;
             }
         }
 
+        snake.unshift(head);
         if (!grow) snake.pop();
 
-        // COLLISION WITH WALLS
+        // paredes
         if (
             head.x < 0 ||
             head.y < 0 ||
@@ -135,21 +139,22 @@ export function initSnake() {
         ) {
             gameOver = true;
             gameOverScreen.style.display = "flex";
+            stopLoop();
         }
 
-        // RENDER SNAKE
+        // render snake
         ctx.fillStyle = "#20e2c8";
         snake.forEach(s => ctx.fillRect(s.x, s.y, box, box));
 
-        // RENDER COFFEE
+        // render coffee
         ctx.fillStyle = "#6f4e37";
         ctx.fillRect(coffee.x, coffee.y, box, box);
     }
 
     // ---------------------------
-    // CONTROLED LOOP
+    // LOOP CONTROLADO (FIX REAL)
     // ---------------------------
-    function loop(time = 0) {
+    function loop(time) {
 
         if (!running) return;
 
@@ -161,31 +166,31 @@ export function initSnake() {
         animationId = requestAnimationFrame(loop);
     }
 
-    // ---------------------------
-    // PAUSE / RESUME SYSTEM
-    // ---------------------------
-    function pauseGame() {
+    function startLoop() {
+        if (running) return;
+        running = true;
+        animationId = requestAnimationFrame(loop);
+    }
+
+    function stopLoop() {
         running = false;
         if (animationId) cancelAnimationFrame(animationId);
     }
 
-    function resumeGame() {
-        if (!running) {
-            running = true;
-            loop();
-        }
-    }
-
-    // PAUSE WHEN TAB IS HIDDEN
+    // ---------------------------
+    // VISIBILITY FIX
+    // ---------------------------
     document.addEventListener("visibilitychange", () => {
-        if (document.hidden) pauseGame();
-        else resumeGame();
+        if (document.hidden) stopLoop();
+        else startLoop();
     });
 
-    // PAUSE WHEN SNAKE CONTAINER IS HIDDEN (EX: NAVIGATE TO ANOTHER PROJECT)
+    // ---------------------------
+    // OBSERVER (SAFE)
+    // ---------------------------
     const observer = new MutationObserver(() => {
-        if (container.style.display === "none") pauseGame();
-        else resumeGame();
+        if (container.style.display === "none") stopLoop();
+        else startLoop();
     });
 
     observer.observe(container, {
@@ -193,6 +198,9 @@ export function initSnake() {
         attributeFilter: ["style"]
     });
 
+    // ---------------------------
+    // INIT
+    // ---------------------------
     resize();
     resetGame();
 }

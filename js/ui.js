@@ -13,6 +13,7 @@ const copyEls = document.querySelectorAll(".copy");
 const images = document.querySelectorAll("img");
 /* ---------------------------------------------------------------- */
 const snakeToggle = document.getElementById("snake-toggle");
+const container = document.getElementById("snake-container");
 let snakeOpen = false;
 /* ---------------------------------------------------------------- */
 const progressBar = document.getElementById("scroll-progress");
@@ -97,33 +98,24 @@ images.forEach(img => {
 });
 
 /* SNAKE GAME TOGGLE */
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("snake-toggle");
-    const container = document.getElementById("snake-container");
-    toggle?.addEventListener("click", () => {
-        container.classList.toggle("active");
-    });
-});
-
-/* SNAKE GAME CARD */
 snakeToggle?.addEventListener("click", () => {
 
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-    snakeOpen = !snakeOpen;
-
-    if (snakeOpen && isMobile) {
+    if (!snakeOpen && isMobile) {
         showToast("Opps... necesitas PC para jugar esto 💻☕");
-        snakeOpen = false;
         return;
     }
 
+    snakeOpen = !snakeOpen;
+
+    container.classList.toggle("active", snakeOpen);
+
     showToast(
         snakeOpen
-            ? "Mini juego activado"
+            ? "Mini juego activado ☕"
             : "Mini juego cerrado"
     );
-
 });
 
 typeEffect();

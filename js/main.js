@@ -18,7 +18,13 @@ function waitForCanvasSize(callback) {
 
 window.addEventListener("DOMContentLoaded", () => {
 
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        console.log("Snake disabled on mobile 📵");
+        return;
+    }
+
     waitForCanvasSize(() => {
         initSnake();
     });
+
 });

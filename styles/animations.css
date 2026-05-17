@@ -46,12 +46,6 @@
     opacity 0.25s ease;
 }
 
-.skills-icon:hover {
-    filter:
-        drop-shadow(0 0 6px rgba(255,255,255,0.25));
-    opacity: 1;
-}
-
 /* SKILLS ANIMATION */
 @keyframes scroll-left {
     0% { transform: translateX(0); }
