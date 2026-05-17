@@ -17,6 +17,7 @@ const container = document.getElementById("snake-container");
 let snakeOpen = false;
 /* ---------------------------------------------------------------- */
 const progressBar = document.getElementById("scroll-progress");
+/* ---------------------------------------------------------------- */
 
 /* SCROLL PROGRESS BAR */
 window.addEventListener("scroll", () => {
@@ -118,4 +119,30 @@ snakeToggle?.addEventListener("click", () => {
     );
 });
 
+/* MOBILE NAVBAR BUTTON */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    if (!menuToggle || !navbar) return;
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen = navbar.classList.toggle("active");
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        console.log("toggle:", isOpen);
+    });
+
+    document.querySelectorAll("#navbar a").forEach(link => {
+        link.addEventListener("click", () => {
+
+            navbar.classList.remove("active");
+            menuToggle.textContent = "☰";
+        });
+    });
+
+});
 typeEffect();
