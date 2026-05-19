@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* BODY */
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    font-family: "Inter", sans-serif;
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* NAVBAR */
+.contact-navbar {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border-contacts);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.contact-navbar .nav-link {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--accent-links);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* MAIN */
+main {
+    flex: 1;
+}
+
+/* CONTACT FORM */
+.contact-layout {
+    width: min(90%, 1200px);
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--bg-card);
+    border: 5px solid var(--border-contacts);
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ASIDE */
+.contact-layout aside {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+}
+
+aside .contact-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* SECTION */
+.contact-layout section {
+    flex: 1.5;
+    min-width: 0;
+    padding: 20px;
+}
+
+/* FORM */
+fieldset {
+    border: 4px solid var(--accent-links);
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "JetBrains Mono", monospace;
+    padding: 10px 20px;
+    border: 2px solid var(--border-contacts);
+    border-radius: 5px;
+}
+
+fieldset form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset input {
+    padding: 10px;
+    border: 2px solid var(--border-contacts);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+fieldset textarea {
+    padding: 10px;
+    border: 2px solid var(--border-contacts);
+    border-radius: 5px;
+    font-size: 16px;
+    height: 150px;
+    resize: none;
+    font-family: "Inter", sans-serif;
+}
+
+fieldset button {
+    padding: 10px;
+    background-color: var(--accent-links);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jetbrains Mono", monospace;
+}
+
+fieldset button:hover {
+    background-color: var(--shadow-primary);
+}
+
+/* TOAST */
+#form-toast {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--bg-secondary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--accent-primary);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+#form-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+footer {
+    width: 100%;
+    font-weight: 600;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(10px, 2vw, 16px);
+    background-color: var(--bg-soft);
+}
+
+/* MOBILE QUERY */
+@media (max-width: 768px) {
+
+    .contact-navbar .not-active{
+        display: none
+    }
+
+    .contact-layout {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 15px;
+        padding: 0;
+        border: none;
+    }
+
+    .contact-layout aside,
+    .contact-layout section {
+        width: 100%;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .contact-layout section {
+        order: 1;
+    }
+
+    .contact-layout aside {
+        order: 2;
+    }
+}

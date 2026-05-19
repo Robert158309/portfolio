@@ -72,7 +72,7 @@ export function initSnake() {
     }
 
     // ---------------------------
-    // INPUT (solo uno)
+    // INPUT
     // ---------------------------
     window.addEventListener("keydown", (e) => {
 
@@ -117,7 +117,7 @@ export function initSnake() {
             coffeeCounter.textContent = coffeeCount;
         }
 
-        // colisión consigo misma
+        // colision with self
         for (let i = 0; i < snake.length; i++) {
             if (head.x === snake[i].x && head.y === snake[i].y) {
                 gameOver = true;
@@ -130,7 +130,7 @@ export function initSnake() {
         snake.unshift(head);
         if (!grow) snake.pop();
 
-        // paredes
+        // border collision
         if (
             head.x < 0 ||
             head.y < 0 ||
@@ -152,7 +152,7 @@ export function initSnake() {
     }
 
     // ---------------------------
-    // LOOP CONTROLADO (FIX REAL)
+    // CONTROLED ANIMATION LOOP
     // ---------------------------
     function loop(time) {
 

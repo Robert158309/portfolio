@@ -11,6 +11,9 @@ This is my personal portfolio developed with HTML, CSS and JavaScript, focused o
 * JetBrains Mono
 * Inter
 
+## Contact Form
+* The contact form is handled using :contentReference[oaicite:0]{index=0} to process and deliver messages directly to email without requiring a custom backend.
+
 ## Credits
 * Some icons were obtained from Tabler Icons
 * Technology icons were obtained from Iconify Design

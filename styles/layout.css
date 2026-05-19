@@ -15,19 +15,19 @@
 
 /* PAGE NAVBAR */
 .navbar {
-    position: sticky;
-    top: 15px;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--bg-soft);
+    border-bottom: 2px solid var(--accent-primary);
     display: flex;
     justify-content: center;
-    gap: clamp(10px, 2vw, 20px);
+    align-items: center;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 15px;
-    margin-top: 20px;
-    background-color: var(--bg-soft);
-    border: 2px solid var(--accent-primary);
-    border-radius: 160px;
-    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 /* NAVBAR BUTTONS */
