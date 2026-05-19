@@ -1,10 +1,7 @@
 const form = document.querySelector("form");
 const toast = document.getElementById("form-toast");
-/* ---------------------------------------------------------------- */
-const name = form.nombre.value.trim();
-const email = form.correo.value.trim();
-const message = form.mensaje.value.trim();
 
+/* SHOW TOAST MESSAGE */
 function showToast(message) {
 
     toast.textContent = message;
@@ -19,21 +16,23 @@ function showToast(message) {
 
 }
 
+/* VALIDATE FORM */
 form.addEventListener("submit", (event) => {
 
+    const { nombre, correo, mensaje } = form;
+
+    const name = nombre.value.trim();
+    const email = correo.value.trim();
+    const message = mensaje.value.trim();
+
     if (!name || !email || !message) {
-
         event.preventDefault();
-        showToast("Completa todos los campos");
-        return;
-
+        return showToast("Completa todos los campos");
     }
 
-    if (!form.correo.checkValidity()) {
-
+    if (!correo.checkValidity()) {
         event.preventDefault();
-        showToast("Ingresa un correo válido");
-
+        return showToast("Ingresa un correo válido");
     }
 
 });
