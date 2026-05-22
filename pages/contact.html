@@ -12,23 +12,31 @@
 
 		<link rel = "stylesheet" type = "text/css" href = "../styles/contact.css">
 		<link rel = "stylesheet" type = "text/css" href = "../styles/base.css">
+		<link rel = "stylesheet" type = "text/css" href = "../styles/layout.css">
 
 		<link rel="icon" type="image/png" href="../assets/img/user-icon.png">
 
+		<script src = "../js/ui.js" defer></script>
 		<script src = "../js/contact.js" defer></script>
+		<script src = "../js/navigation.js" defer></script>
 
 	</head>
 
 	<body class = "contact-page">
 
-		<nav class = "contact-navbar">
-			<a href = "../index.html#home" class = "nav-link">Inicio</a>
-            <a href = "../index.html#skills" class = "nav-link not-active">Habilidades</a>
+		<button id = "menu-toggle" class = "menu-toggle">☰</button>
+
+        <!-- NAVBAR -->
+        <nav id = "navbar" class = "navbar container">
+
+            <a href = "../index.html#home" class = "nav-link">Inicio</a>
+            <a href = "../index.html#skills" class = "nav-link">Habilidades</a>
             <a href = "../index.html#projects" class = "nav-link">Proyectos</a>
-            <a href = "../index.html#certifications" class = "nav-link not-active">Certificaciones</a>
-            <a href = "../index.html#about-section" class = "nav-link not-active">Acerca De</a>
-            <a href = "../index.html#contact-section" class = "nav-link not-active">Contacto</a>
-		</nav>
+            <a href = "../index.html#certifications" class = "nav-link">Certificaciones</a>
+            <a href = "../index.html#about-section" class = "nav-link">Acerca De</a>
+            <a href = "../index.html#contact-section" class = "nav-link">Contacto</a>
+
+        </nav>
 
 		<main>
 
