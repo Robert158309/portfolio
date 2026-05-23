@@ -8,21 +8,21 @@
 
 		<meta name = "viewport" content = "width=device-width, initial-scale=1">
 
-		<title>Contactame | Roberto</title>
+		<title>Proyectos | Roberto</title>
 
-		<link rel = "stylesheet" type = "text/css" href = "../styles/contact.css">
 		<link rel = "stylesheet" type = "text/css" href = "../styles/base.css">
 		<link rel = "stylesheet" type = "text/css" href = "../styles/layout.css">
+        <link rel = "stylesheet" type = "text/css" href = "../styles/sections.css">
+        <link rel = "stylesheet" type = "text/css" href = "../styles/projects.css">
 
 		<link rel = "icon" type = "image/png" href = "../assets/img/icons/user-icon.png">
 
-		<script src = "../js/ui.js" defer></script>
-		<script src = "../js/contact.js" defer></script>
 		<script src = "../js/navigation.js" defer></script>
+        <script src = "../js/projects.js" defer></script>
 
 	</head>
 
-	<body class = "contact-page">
+	<body class = "projects-page">
 
 		<button id = "menu-toggle" class = "menu-toggle">☰</button>
 
@@ -38,47 +38,26 @@
 
         </nav>
 
-		<main>
+        <section class = "container">
+            <p class = "messages">
+                Acá puedes ver algunos de los proyectos en los que he trabajado 💻<br><br>
 
-			<section class = "contact-layout">
+                Puede que varios no sean los más “interesantes” del mundo, pero créeme… 
+                como desarrollador que apenas está iniciando, se siente bastante bien saber 
+                que al menos compilan 🫠
+            </p>
+        </section>
 
-				<aside>
+        <main class = "container">
 
-					<img src = "../assets/img/contact-img.webp" alt = "Imagen" class = "contact-img">
+            <!-- PROJECT CARD -->
+            <section id = "projects-container"></section>
 
-				</aside>
-
-				<section>
-
-					<fieldset>
-
-						<legend>Hablemos 😄</legend>
-
-						<form action = "https://formspree.io/f/xjgzkrzd" method = "POST" novalidate>
-
-							<input type = "text" name = "nombre" placeholder = "Tu nombre" required>
-
-							<input type = "email" name = "correo" placeholder = "Tu correo" required>
-
-							<textarea name = "mensaje" placeholder = "Escribe tu mensaje..." required></textarea>
-
-							<button type = "submit">Enviar mensaje</button>
-
-						</form>
-
-					</fieldset>
-
-				</section>
-
-			</section>
-
-		</main>
+        </main>
 
 		<footer>
 			Roberto Monzón © 2026 • Hecho con café, bugs y decisiones cuestionables
 		</footer>
-
-		<div id = "form-toast"></div>
 
 	</body>
 

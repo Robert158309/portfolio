@@ -1,0 +1,93 @@
+[
+    {
+        "title": "Noticiero Integral",
+
+        "tag": "Proyecto escolar",
+
+        "description": "Página web para un noticiero ficticio desarrollado como proyecto de seminario del último año de la carrera. Construido en dos días, priorizando funcionalidad, diseño responsivo y despliegue funcional.",
+
+        "technologies": [
+            "../assets/img/icons/devicon--html5.svg",
+            "../assets/img/icons/devicon--css3.svg",
+            "../assets/img/icons/devicon--javascript.svg"
+        ],
+
+        "buttons": [
+            {
+                "text": "Ver despliegue",
+                "link": "https://robert158309.github.io/noticiero-integral/"
+            }
+        ],
+
+        "image": "../assets/img/projects/noticiero-integral.webp"
+    },
+
+    {
+        "title": "R-Manager",
+
+        "tag": "Proyecto personal - En progreso",
+
+        "description": "Proyecto desarrollado para la facilitación de gestión de talleres de reparación en electrónica, con login, perfiles y base de datos.",
+
+        "technologies": [
+            "../assets/img/icons/devicon--csharp.svg",
+            "../assets/img/icons/devicon--html5.svg",
+            "../assets/img/icons/devicon--css3.svg",
+            "../assets/img/icons/devicon--javascript.svg",
+            "../assets/img/icons/devicon--typescript.svg",
+            "../assets/img/icons/devicon--sqlite.svg"
+        ],
+
+        "buttons": [
+            {
+                "text": "Ver repositorio",
+                "link": "https://github.com/Robert158309/R-Manager"
+            }
+        ],
+
+        "image": "../assets/img/projects/r-manager.webp"
+    },
+
+    {
+        "title": "Hello World",
+
+        "tag": "Experimento",
+
+        "description": "Proyecto desarrollado en C++ con el objetivo de reforzar y mantener mis conocimientos en el lenguaje. Incluye diferentes módulos como calculadora, gestión de parqueo, librería y conversión de unidades, organizados en múltiples archivos para practicar una mejor estructura del código y el uso de funciones.",
+
+        "technologies": [
+            "../assets/img/icons/devicon--cplusplus.svg"
+        ],
+
+        "buttons": [
+            {
+                "text": "Ver repositorio",
+                "link": "https://github.com/Robert158309/Hello-World"
+            }
+        ],
+
+        "image": "../assets/img/projects/hello-world.webp"
+    },
+
+    {
+        "title": "SeedLive",
+
+        "tag": "Proyecto Escolar",
+
+        "description": "Consiste en un sistema de riego automatizado con capacidad de que le sean programados horarios y con gestion de distintos usuarios para la interaccion con el programa. Incluye Base de datos para el monitoreo de horarios y de inventario. Tambien tiene integración con módulos Arduino UNO. Fue presentado al público general durante la Expotec 2024 en el Instituto Emiliani Somascos.",
+
+        "technologies": [
+            "../assets/img/icons/devicon--csharp.svg",
+            "../assets/img/icons/devicon--microsoftsqlserver.svg"
+        ],
+
+        "buttons": [
+            {
+                "text": "No disponible",
+                "link": "not-found.html"
+            }
+        ],
+
+        "image": "../assets/img/projects/seedlive.webp"
+    }
+]

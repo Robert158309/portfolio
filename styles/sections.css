@@ -3,7 +3,7 @@
 /* PROJECTS SECTION */
 .projects {
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-bottom: 5px solid;
     -webkit-user-select: text;
     -moz-user-select: text;
@@ -132,6 +132,15 @@
 }
 
 /* SECTIONS FOOTERS CONFIG */
+.messages a {
+    font-family: "JetBrains Mono", monospace;
+    font-size: clamp(14px, 1rem + 0.3vw, 16px);
+    color: var(--accent-badges-link);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
 .project_footer a,
 .badges-footer a {
     font-family: "JetBrains Mono", monospace;
@@ -143,6 +152,7 @@
 }
 
 .contacts:hover,
+.messages a:hover,
 .project_footer a:hover,
 .badges-footer a:hover {
     opacity: 1;
@@ -173,8 +183,8 @@
 
 #info { border-color: var(--border-info); }
 
-/* CONTACT MESSAGE */
-.contact-message {
+/* MESSAGES */
+.messages {
     font-family: "Inter", sans-serif;
     font-size: clamp(14px, 1.3vw, 17px);
     font-weight: 400;
