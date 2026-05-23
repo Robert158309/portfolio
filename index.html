@@ -50,7 +50,7 @@
         <div id = "scroll-progress"></div>
 
         <!-- NAVBAR -->
-        <nav id = "navbar" class = "navbar container">
+        <nav id = "navbar" class = "navbar">
 
             <a href = "#home" class = "nav-link">Inicio</a>
             <a href = "#skills" class = "nav-link">Habilidades</a>
@@ -103,69 +103,11 @@
                 <section class = "skills-rail">
 
                     <div class = "skills-track track-left">
-
-                        <div class = "skills-group">
-
-                            <img src = "assets/img/icons/devicon--cplusplus.svg" alt = "C++ Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--csharp.svg" alt = "C# Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--java-wordmark.svg" alt = "Java Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--html5.svg" alt = "HTML Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--css3.svg" alt = "CSS Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/skill-icons--javascript.svg" alt = "JavaScript Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--git.svg" alt = "Git Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--mysql.svg" alt = "MySQL Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--microsoftsqlserver.svg" alt = "SQL Server Logo" class = "skills-icon">
- 
-                        </div>
-
-                        <div class = "skills-group">
-
-                            <img src = "assets/img/icons/devicon--cplusplus.svg" alt = "C++ Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--csharp.svg" alt = "C# Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--java-wordmark.svg" alt = "Java Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--html5.svg" alt = "HTML Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--css3.svg" alt = "CSS Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/skill-icons--javascript.svg" alt = "JavaScript Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--git.svg" alt = "Git Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--mysql.svg" alt = "MySQL Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/vdevicon--microsoftsqlserver.svg" alt = "SQL Server Logo" class = "skills-icon">
-
-                        </div>
-
+                        <div id = "skills-top" class = "skills-group"></div>
                     </div>
 
                     <div class = "skills-track track-right">
-
-                        <div class = "skills-group">
-
-                            <img src = "assets/img/icons/devicon--ubuntu.svg" alt = "Ubuntu Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--debian.svg" alt = "Debian Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--linuxmint.svg" alt = "Linux Mint Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/vskill-icons--windows-dark.svg" alt = "Windows 11 Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/vvscode-icons--file-type-affinity.svg" alt = "Affinity Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/skill-icons--sublime-dark.svg" alt = "Sublime Text Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--netbeans.svg" alt = "NetBeans Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--visualstudio.svg" alt = "Visual Studio Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--vscode.svg" alt = "Visual Studio Code Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--intellij.svg" alt = "Intellij IDEA Logo" class = "skills-icon">
- 
-                        </div>
-
-                        <div class = "skills-group">
-
-                            <img src = "assets/img/icons/devicon--ubuntu.svg" alt = "Ubuntu Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--debian.svg" alt = "Debian Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--linuxmint.svg" alt = "Linux Mint Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/skill-icons--windows-dark.svg" alt = "Windows 11 Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/vscode-icons--file-type-affinity.svg" alt = "Affinity Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/skill-icons--sublime-dark.svg" alt = "Sublime Text Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--netbeans.svg" alt = "NetBeans Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--visualstudio.svg" alt = "Visual Studio Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--vscode.svg" alt = "Visual Studio Code Logo" class = "skills-icon">
-                            <img src = "assets/img/icons/devicon--intellij.svg" alt = "Intellij IDEA Logo" class = "skills-icon">
-                            
-                        </div>
-
+                        <div id = "skills-bottom" class = "skills-group"></div>
                     </div>
 
                 </section>
@@ -188,20 +130,18 @@
                 <section class = "two-columns">
 
                     <article class = "generic projects">
-                        <strong class = "project_name">Sistema de Riego "SeedLive"</strong> <br><br>
-                        Consiste en un sistema de riego automatizado con capacidad de que le sean programados horarios
-                        y con gestion de distintos usuarios para la interaccion con el programa. Incluye Base de datos
-                        para el monitoreo de horarios y de inventario. Tambien tiene integración con módulos Arduino UNO.
-                        Fue presentado al público general durante la Expotec 2024 en el Instituto Emiliani Somascos. <br><br>
-                        Tecnologías: C#, DB2, Arduino
+                        <strong class = "project_name">R-Manager</strong> <br><br>
+                        Consiste en un sistema de gestión de taller, especialmente para aquellos que
+                        se dedican a la reparación de dispositivos electrónicos, hecho con frontend web.<br><br>
+                        <footer class = "project_footer">
+                            <a href = "https://github.com/Robert158309/R-Manager" target = "_blank" rel = "noopener noreferrer" title = "Ver proyecto en GitHub">Ver proyecto en GitHub →</a>
+                        </footer>
                     </article>
 
                     <article class = "generic projects">
-                        <strong class = "project_name">Sistema Modular en C++</strong> <br><br>
+                        <strong class = "project_name">Hello World</strong> <br><br>
                         Proyecto desarrollado en C++ con el objetivo de reforzar y mantener mis conocimientos en el lenguaje. 
-                        Incluye diferentes módulos como calculadora, gestión de parqueo, librería y conversión de unidades, 
-                        organizados en múltiples archivos para practicar una mejor estructura del código y el uso de funciones. <br><br>
-                        Tecnologías: C++, CMake
+                        También para practicar una mejor estructura del código y el uso de funciones. <br><br>
                         <footer class = "project_footer">
                             <a href = "https://github.com/Robert158309/Hello-World" target = "_blank" rel = "noopener noreferrer" title = "Ver proyecto en GitHub">Ver proyecto en GitHub →</a>
                         </footer>

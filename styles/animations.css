@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+/* SCROLL PROGRESS BAR */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-primary), #00ffcc);
+    box-shadow: 0 0 10px var(--accent-primary);
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
 /* SKILLS MARQUEE */
 .skills-rail {
     overflow: hidden;
@@ -137,6 +150,37 @@
     background: transparent;
     color: white;
     cursor: pointer;
+}
+
+/* PROJECTS PAGE BACKGROUND ANIMATION */
+.a-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            -45deg,
+            #000000,
+            #050816c5,
+            #060911,
+            #020617
+        );
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    filter: saturate(120%);
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* RESPONSIVE DESIGN FOR GAME ON MOBILE*/
