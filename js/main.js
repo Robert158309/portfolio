@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
 const topContainer = document.getElementById("skills-top");
 const bottomContainer = document.getElementById("skills-bottom");
 
-fetch("../assets/data/skills.json")
+fetch("assets/data/skills.json")
 
   .then(res => res.json())
   .then(data => {
