@@ -1,24 +1,24 @@
 [
     
-  { "icon": "assets/img/icons/devicon--cplusplus.svg", "alt": "C++", "role": "top" },
-  { "icon": "assets/img/icons/devicon--csharp.svg", "alt": "C#", "role": "top" },
-  { "icon": "assets/img/icons/devicon--java-wordmark.svg", "alt": "Java", "role": "top" },
-  { "icon": "assets/img/icons/skill-icons--javascript.svg", "alt": "JavaScript", "role": "top" },
-  { "icon": "assets/img/icons/devicon--html5.svg", "alt": "HTML", "role": "top" },
-  { "icon": "assets/img/icons/devicon--css3.svg", "alt": "CSS", "role": "top" },
-  { "icon": "assets/img/icons/devicon--mysql.svg", "alt": "MySQL", "role": "top" },
-  { "icon": "assets/img/icons/devicon--microsoftsqlserver.svg", "alt": "SQL Server", "role": "top" },
-  { "icon": "assets/img/icons/devicon--git.svg", "alt": "Git", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--cplusplus.svg", "alt": "C++", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--csharp.svg", "alt": "C#", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--java-wordmark.svg", "alt": "Java", "role": "top" },
+  { "icon": "../assets/img/icons/skill-icons--javascript.svg", "alt": "JavaScript", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--html5.svg", "alt": "HTML", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--css3.svg", "alt": "CSS", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--mysql.svg", "alt": "MySQL", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--microsoftsqlserver.svg", "alt": "SQL Server", "role": "top" },
+  { "icon": "../assets/img/icons/devicon--git.svg", "alt": "Git", "role": "top" },
 
-  { "icon": "assets/img/icons/devicon--ubuntu.svg", "alt": "Ubuntu", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--debian.svg", "alt": "Debian", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--linuxmint.svg", "alt": "Linux Mint", "role": "bottom" },
-  { "icon": "assets/img/icons/skill-icons--windows-dark.svg", "alt": "Windows", "role": "bottom" },
-  { "icon": "assets/img/icons/vscode-icons--file-type-affinity.svg", "alt": "Affinity", "role": "bottom" },
-  { "icon": "assets/img/icons/skill-icons--sublime-dark.svg", "alt": "Sublime Text", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--netbeans.svg", "alt": "NetBeans", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--visualstudio.svg", "alt": "Visual Studio", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--vscode.svg", "alt": "VS Code", "role": "bottom" },
-  { "icon": "assets/img/icons/devicon--intellij.svg", "alt": "IntelliJ IDEA", "role": "bottom" }
+  { "icon": "../assets/img/icons/devicon--ubuntu.svg", "alt": "Ubuntu", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--debian.svg", "alt": "Debian", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--linuxmint.svg", "alt": "Linux Mint", "role": "bottom" },
+  { "icon": "../assets/img/icons/skill-icons--windows-dark.svg", "alt": "Windows", "role": "bottom" },
+  { "icon": "../assets/img/icons/vscode-icons--file-type-affinity.svg", "alt": "Affinity", "role": "bottom" },
+  { "icon": "../assets/img/icons/skill-icons--sublime-dark.svg", "alt": "Sublime Text", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--netbeans.svg", "alt": "NetBeans", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--visualstudio.svg", "alt": "Visual Studio", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--vscode.svg", "alt": "VS Code", "role": "bottom" },
+  { "icon": "../assets/img/icons/devicon--intellij.svg", "alt": "IntelliJ IDEA", "role": "bottom" }
 
 ]
