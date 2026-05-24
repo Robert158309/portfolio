@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!menuToggle || !menuIcon || !navbar) return;
 
-    const EXPAND_ICON = "/assets/img/icons/layout-sidebar-left-expand.svg";
-    const COLLAPSE_ICON = "/assets/img/icons/layout-sidebar-left-collapse.svg";
+    const EXPAND_ICON = `${BASE_PATH}assets/img/icons/layout-sidebar-left-expand.svg`;
+    const COLLAPSE_ICON = `${BASE_PATH}assets/img/icons/layout-sidebar-left-collapse.svg`;
 
     menuToggle.addEventListener("click", () => {
 
