@@ -1,7 +1,5 @@
 const projectsContainer = document.getElementById("projects-container");
 
-console.log("container:", document.getElementById("projects-container"));
-
 fetch("../assets/data/projects.json")
 
 .then(response => response.json())
@@ -67,40 +65,4 @@ fetch("../assets/data/projects.json")
         projectsContainer.innerHTML += projectCard;
 
     });
-});
-
-/* DRAG KILLER */
-const images = document.querySelectorAll("img");
-images.forEach(img => {
-
-    img.addEventListener("dragstart", e => e.preventDefault());
-    img.setAttribute("draggable", "false");
-
-});
-
-/* MOBILE NAVBAR BUTTON */
-document.addEventListener("DOMContentLoaded", () => {
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const navbar = document.getElementById("navbar");
-
-    if (!menuToggle || !navbar) return;
-
-    menuToggle.addEventListener("click", () => {
-
-        const isOpen = navbar.classList.toggle("active");
-
-        menuToggle.textContent = isOpen ? "✕" : "☰";
-
-        console.log("toggle:", isOpen);
-    });
-
-    document.querySelectorAll("#navbar a").forEach(link => {
-        link.addEventListener("click", () => {
-
-            navbar.classList.remove("active");
-            menuToggle.textContent = "☰";
-        });
-    });
-
 });

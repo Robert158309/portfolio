@@ -123,26 +123,35 @@ snakeToggle?.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const menuToggle = document.getElementById("menu-toggle");
+    const menuIcon = document.getElementById("menu-icon");
     const navbar = document.getElementById("navbar");
 
-    if (!menuToggle || !navbar) return;
+    if (!menuToggle || !menuIcon || !navbar) return;
+
+    const EXPAND_ICON = "/assets/img/icons/layout-sidebar-left-expand.svg";
+    const COLLAPSE_ICON = "/assets/img/icons/layout-sidebar-left-collapse.svg";
 
     menuToggle.addEventListener("click", () => {
 
         const isOpen = navbar.classList.toggle("active");
 
-        menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuIcon.src = isOpen
+            ? COLLAPSE_ICON
+            : EXPAND_ICON;
 
         console.log("toggle:", isOpen);
     });
 
     document.querySelectorAll("#navbar a").forEach(link => {
+
         link.addEventListener("click", () => {
 
             navbar.classList.remove("active");
-            menuToggle.textContent = "☰";
+
+            menuIcon.src = EXPAND_ICON;
         });
     });
 
 });
+
 typeEffect();
