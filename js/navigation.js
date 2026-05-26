@@ -13,20 +13,29 @@ window.addEventListener("scroll", () => {
         if (scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
-
     });
 
     navLinks.forEach(link => {
 
         link.classList.remove("active");
+        const href = link.getAttribute("href");
 
-        if (link.getAttribute("href") === `#${current}`) {
+        if (href && href.includes(`#${current}`)) {
             link.classList.add("active");
         }
-
     });
-
 });
+
+/* WINDOW REFRESH */
+window.onload = () => {
+
+    history.replaceState(
+        null,
+        null,
+        window.location.pathname
+    );
+    window.scrollTo(0, 0);
+};
 
 /* SCROLL TO TOP ON LOAD */
 window.addEventListener("load", () => {
