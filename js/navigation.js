@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
         link.classList.remove("active");
         const href = link.getAttribute("href");
 
-        if (href && href.includes(`#${current}`)) {
+        if (current && href && href.includes(`#${current}`)) {
             link.classList.add("active");
         }
     });
