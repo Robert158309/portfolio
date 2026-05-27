@@ -161,13 +161,14 @@
         linear-gradient(
             -45deg,
             #000000,
-            #050816c5,
-            #060911,
+            #020617,
+            #030712,
+            #0a0f1f,
             #020617
         );
     background-size: 400% 400%;
     animation: gradientMove 15s ease infinite;
-    filter: saturate(120%);
+    filter: saturate(110%) brightness(0.9);
 }
 
 @keyframes gradientMove {
