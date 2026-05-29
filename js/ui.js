@@ -119,39 +119,4 @@ snakeToggle?.addEventListener("click", () => {
     );
 });
 
-/* MOBILE NAVBAR BUTTON */
-document.addEventListener("DOMContentLoaded", () => {
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const menuIcon = document.getElementById("menu-icon");
-    const navbar = document.getElementById("navbar");
-
-    if (!menuToggle || !menuIcon || !navbar) return;
-
-    const EXPAND_ICON = `${BASE_PATH}assets/img/icons/layout-sidebar-left-expand.svg`;
-    const COLLAPSE_ICON = `${BASE_PATH}assets/img/icons/layout-sidebar-left-collapse.svg`;
-
-    menuToggle.addEventListener("click", () => {
-
-        const isOpen = navbar.classList.toggle("active");
-
-        menuIcon.src = isOpen
-            ? COLLAPSE_ICON
-            : EXPAND_ICON;
-
-        console.log("toggle:", isOpen);
-    });
-
-    document.querySelectorAll("#navbar a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navbar.classList.remove("active");
-
-            menuIcon.src = EXPAND_ICON;
-        });
-    });
-
-});
-
 typeEffect();
