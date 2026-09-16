@@ -7,7 +7,6 @@
 
 /* CONTACT FORM */
 .contact-layout {
-    margin: 50px auto;
     padding: 20px;
     background-color: var(--bg-card);
     border: 5px solid var(--borders);
@@ -34,7 +33,7 @@
 
 /* FORM */
 fieldset {
-    border: 4px solid var(--accent-links);
+    border: 2px solid var(--accent-badges-link);
     border-radius: 4px;
     padding: 20px;
     width: 100%;
@@ -49,7 +48,7 @@ legend {
     margin-bottom: 15px;
     font-family: "JetBrains Mono", monospace;
     padding: 10px 20px;
-    border: 2px solid var(--borders);
+    border: 2px solid var(--accent-badges-link);
     border-radius: 5px;
 }
 
@@ -107,40 +106,4 @@ fieldset button:hover {
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
-}
-
-#form-toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* MOBILE QUERY */
-@media (max-width: 768px) {
-
-    .contact-navbar .not-active{
-        display: none
-    }
-
-    .contact-layout {
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 15px;
-        padding: 0;
-        border: none;
-    }
-
-    .contact-layout aside,
-    .contact-layout section {
-        width: 100%;
-        min-width: 0;
-        padding: 10px;
-    }
-
-    .contact-layout section {
-        order: 1;
-    }
-
-    .contact-layout aside {
-        order: 2;
-    }
 }

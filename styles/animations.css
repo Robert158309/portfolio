@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+/* DESCRIPTION ANIMATION */
+#description::after {
+    content: "|";
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* NAVBAR BUTTONS ANIMATION */
+.navbar a:hover {
+    color: var(--accent-primary);
+    background-color: rgba(32, 226, 200, 0.08);
+    box-shadow: 0 0 12px rgba(32, 226, 200, 0.2);
+    transform: translateY(-2px);
+}
+
 /* SCROLL PROGRESS BAR */
 #scroll-progress {
     position: fixed;
@@ -59,6 +77,10 @@
     opacity 0.25s ease;
 }
 
+.projects_cont a:hover {
+    text-decoration: underline;
+}
+
 /* SKILLS ANIMATION */
 @keyframes scroll-left {
     0% { transform: translateX(0); }
@@ -78,89 +100,42 @@
     box-shadow: 0 0 15px rgba(32, 226, 200, 0.25);
 }
 
-/* BUTTON */
-#snake-toggle {
-    cursor: pointer;
-    transition: 0.3s;
+/* FORM TOAST ANIMATION */
+#form-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
-#snake-toggle:hover {
-    background-color: var(--bg-soft);
+/* LINKS ANIMATION */
+a, .linksicons {
+    transition: all 0.3s ease;
 }
 
-
-/* PROJECTS PAGE BACKGROUND ANIMATION */
-.a-bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background:
-        linear-gradient(
-            -45deg,
-            #000000,
-            #020617,
-            #030712,
-            #0a0f1f,
-            #020617
-        );
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    filter: saturate(110%) brightness(0.9);
+/* LINKS ICONS ANIMATION */
+.linksicons:hover {
+    transform: scale(1.1);
 }
 
-@keyframes gradientMove {
+/* PROYECTS BUTTON */
+@keyframes reveal {
 
-    0% {
-        background-position: 0% 50%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+
 }
 
-/* RESPONSIVE DESIGN FOR GAME ON MOBILE*/
-@media (max-width: 768px) {
-    #snake-container {
-        display: none;
-    }
+/* BADGES HOVER */
+.badges-card:hover {
+    transform: translateY(-3px) scale(1.03);
 }
 
-/* MOBILE HEADER DESIGN */
-@media (max-width: 768px) {
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 5px 30px 5px;
-    }
-
-    #photo {
-        order: 1;
-        width: 150px;
-        margin-bottom: 20px;
-    }
-
-    .header-text {
-        order: 2;
-    }
-
-    #links {
-        order: 3;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .container {
-        width: 95%;
-    }
-}
-
-.paused * {
-    animation-play-state: paused !important;
+/* HOVERS */
+.contacts:hover,
+.messages a:hover,
+.project_footer a:hover,
+.badges-footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }

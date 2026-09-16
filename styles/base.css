@@ -38,23 +38,47 @@
 
 /* COLORS */
 :root {
+
     /* BACKGROUNDS */
-    --bg-main: #000000;
-    --bg-secondary: #050505;
-    --bg-card: #080808;
-    --bg-soft: #0d0d0dcc;
+    --bg-main: #080b10;
+    --bg-secondary:
+    radial-gradient(
+        circle at 80% 30%,
+        #123b68 0%,
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at 15% 80%,
+        #102a46 0%,
+        transparent 30%
+    ),
+    #080b10;
+    --bg-card: #151c27;
+    --bg-card-hover: #1b2533;
+    --bg-navbar: #0b1018e6;
+    --bg-soft: #1017223f;
+
     /* TEXT */
-    --text-main: #e6edf7;
+    --text-main: #f1f5f9;
+    --text-secondary: #a8b3c2;
+    --text-muted: #718096;
+
     /* ACCENTS */
-    --accent-primary: #1769e0;
-    --accent-links: #3b82f6;
-    --accent-hover: #60a5fa;
+    --accent-primary: #3b82f6;
+    --accent-links: #60a5fa;
+    --accent-hover: #93c5fd;
     --accent-badges-link: #2563eb;
+
+    /* SPECIAL */
+    --accent-gold: #d4a72c;
+
     /* BORDERS */
-    --borders: #123d7a;
+    --border-primary: #243247;
+    --border-accent: #315d9c;
+
     /* EFFECTS */
-    --shadow-primary: #1769e04d;
-    --shadow-projects: #2563eb33;
+    --shadow-primary: #3b82f633;
+    --shadow-card: #00000066;
 }
 
 html {
@@ -69,23 +93,11 @@ html {
 
 /* BODY */
 body {
-    background:
-        linear-gradient(
-            -45deg,
-            #000000,
-            #020617,
-            #030712,
-            #0a0f1f,
-            #020617
-        );
+    background-color: var(--bg-main);
     font-family: "Inter", sans-serif;
     font-size: clamp(14px, 1.5vw, 16px);
     color: var(--text-main);
     line-height: 1.6;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 /* PRINCIPAL CONTAINER */

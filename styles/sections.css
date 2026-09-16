@@ -1,23 +1,16 @@
 @charset "UTF-8";
 
 /* PROJECTS SECTION */
-.projects {
+.projects_cont {
     padding: 20px;
     margin-bottom: 10px;
-    border-bottom: 5px solid;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
 }
 
-.project_footer {
-    margin-top: 15px;
+.projects_cont a {
+    display: block;
     text-align: center;
-    font-size: 18px;
-    background-color: var(--bg-soft);
-    padding: 10px;
-    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent-links);
 }
 
 .project_name {
@@ -34,26 +27,16 @@
 
 /* TWO COLUMNS */
 .two-columns {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
-}
-
-.two-columns > * {
-    flex: 1;
-    min-width: 320px;
 }
 
 /* THREE COLUMNS */
 .three-columns {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
-}
-
-.three-columns > * {
-    flex: 1;
-    min-width: 250px;
 }
 
 /* TEXT BLOCKS */
@@ -61,37 +44,16 @@
 .academic_islands,
 .certifications_islands {
     padding: 15px;
-    border-bottom: 5px solid;
-}
-
-.skills {
-    text-align: left;
-    padding-left: clamp(45px, 5vw, 50px);
-    padding-right: clamp(30px, 3vw, 40px);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 5px solid;  
 }
 
 #about { 
     padding: 20px;
-    border-bottom: 5px solid; 
 }
 
 #info {
     padding: 30px;
     line-height: 2.2;
     gap: 10px;
-    border-bottom: 5px solid;
-}
-
-.contacts {
-    font-family: "JetBrains Mono", monospace;
-    font-size: clamp(14px, 1.2vw, 18px);
-    color: var(--accent-links);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: 0.3s;
 }
 
 /* BADGES SECTION */
@@ -118,17 +80,12 @@
     border-radius: 10px;
 }
 
-.badges-card:hover {
-    transform: translateY(-3px) scale(1.03);
-}
-
 .badges-footer {
     text-align: center;
     margin: 0 0 20px 0;
     background-color: var(--bg-soft);
     padding: 10px;
     border-radius: 0 0 5px 5px;
-    border-bottom: 5px solid;
 }
 
 /* SECTIONS FOOTERS CONFIG */
@@ -151,50 +108,7 @@
     transition: 0.3s;
 }
 
-.contacts:hover,
-.messages a:hover,
-.project_footer a:hover,
-.badges-footer a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
 /* TEXT ALIGN SECTION */
 .contacts, .academic_islands,
 .certifications_islands { text-align: center; }
 #info, #about, .projects { text-align: justify; }
-
-/* SECTION COLORS */
-.skills { border-color: var(--borders); }
-
-.projects {
-    border: 5px solid var(--borders);
-    box-shadow: 0 0 10px var(--shadow-projects);
-}
-
-.academic_islands { border-color: var(--borders); }
-
-.certifications_islands,
-.badges-footer { border-color: var(--borders); }
-
-.contacts { border-color: var(--borders); }
-
-#about { border-color: var(--borders); }
-
-#info { border-color: var(--borders); }
-
-/* MESSAGES */
-.messages {
-    font-family: "Inter", sans-serif;
-    font-size: clamp(14px, 1.3vw, 17px);
-    font-weight: 400;
-    text-align: center;
-    line-height: 1.8;
-    margin: 20px 0;
-    padding: 18px;
-    background-color: var(--bg-soft);
-    border: 1px solid var(--accent-primary);
-    border-radius: 12px;
-    opacity: 0.95;
-    backdrop-filter: blur(8px);
-}

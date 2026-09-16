@@ -1,20 +1,20 @@
 const texts = [
-    "Desarrollador Web Junior",
-    "Técnico en Informática"
+  "Creando hoy, rompiendo cosas mañana",
+  "Mi código tiene personalidad propia",
+  "¿Por qué funciona? No lo sé, pero funciona",
+  "Funcionó en mi máquina",
+  "sudo apt install café",
+  "¿Quien necesita dormir cuando tienes café y código?",
+  "Todo bajo control (mentira)",
+  "Ctrl + C, Ctrl + V y que Dios nos ayude",
+  "Si funciona, no lo toques",
 ];
-const animation = document.getElementById("profession");
+const animation = document.getElementById("description");
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 /* ---------------------------------------------------------------- */
-const toast = document.getElementById("toast");
-const copyEls = document.querySelectorAll(".copy");
-/* ---------------------------------------------------------------- */
 const images = document.querySelectorAll("img");
-/* ---------------------------------------------------------------- */
-const snakeToggle = document.getElementById("snake-toggle");
-const container = document.getElementById("snake-container");
-let snakeOpen = false;
 /* ---------------------------------------------------------------- */
 const progressBar = document.getElementById("scroll-progress");
 /* ---------------------------------------------------------------- */
@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
     progressBar.style.width = progress + "%";
 });
 
-/* PROFESSION TYPE EFFECT */
+/* DESCRIPTION TYPE EFFECT */
 function typeEffect() {
 
     const currentText = texts[textIndex];
@@ -41,7 +41,7 @@ function typeEffect() {
 
         if (charIndex === currentText.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 5000);
+            setTimeout(typeEffect, 6000);
             return;
         }
     } else {
@@ -57,66 +57,12 @@ function typeEffect() {
     setTimeout(typeEffect, isDeleting ? 30 : 60);
 }
 
-/* COPY FUNCTION */
-copyEls.forEach(el => {
-
-    el.addEventListener("click", () => {
-
-        navigator.clipboard.writeText(el.dataset.copy);
-
-        el.style.color = "#00e1ff";
-
-        showToast("Copiado al Portapapeles ✔️");
-
-        setTimeout(() => {
-
-            el.style.color = "";
-
-        }, 500);
-
-    });
-
-});
-
-/* COPY TOAST */
-function showToast(message) {
-
-    toast.textContent = message;
-    toast.style.opacity = "1";
-
-    setTimeout(() => {
-        toast.style.opacity = "0";
-    }, 1200);
-
-}
-
 /* DRAG KILLER */
 images.forEach(img => {
 
     img.addEventListener("dragstart", e => e.preventDefault());
     img.setAttribute("draggable", "false");
 
-});
-
-/* SNAKE GAME TOGGLE */
-snakeToggle?.addEventListener("click", () => {
-
-    const isMobile = window.matchMedia("(pointer: coarse)").matches;
-
-    if (!snakeOpen && isMobile) {
-        showToast("Opps... necesitas PC para jugar esto 💻☕");
-        return;
-    }
-
-    snakeOpen = !snakeOpen;
-
-    container.classList.toggle("active", snakeOpen);
-
-    showToast(
-        snakeOpen
-            ? "Mini juego activado ☕"
-            : "Mini juego cerrado"
-    );
 });
 
 typeEffect();

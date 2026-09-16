@@ -2,36 +2,6 @@ import "./ui.js";
 import "./navigation.js";
 import "./contact.js";
 
-function waitForCanvasSize(callback) {
-
-    const canvas = document.getElementById("snake-game");
-
-    function check() {
-
-        const rect = canvas.getBoundingClientRect();
-
-        if (rect.width > 0 && rect.height > 0) {
-            callback();
-        } else {
-            requestAnimationFrame(check);
-        }
-    }
-    check();
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-
-    if (window.matchMedia("(pointer: coarse)").matches) {
-        console.log("Snake disabled on mobile 📵");
-        return;
-    }
-
-    waitForCanvasSize(() => {
-        initSnake();
-    });
-
-});
-
 /* -------------------------------------------------------- */
 const topContainer = document.getElementById("skills-top");
 const bottomContainer = document.getElementById("skills-bottom");
