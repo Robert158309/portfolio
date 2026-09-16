@@ -109,21 +109,6 @@
     margin-bottom: 40px;
 }
 
-/* LINKS ICONS */
-#links {
-    display: flex;
-    gap: 30px;
-    justify-content: left;
-    flex-wrap: wrap;
-}
-
-.linksicons {
-    width: clamp(28px, 5vw, 35px);
-    height: clamp(28px, 5vw, 35px);
-    color: var(--accent-links);
-    display: block;
-}
-
 /* TITLES */
 .titles {
     font-family: "JetBrains Mono", monospace;
@@ -154,19 +139,112 @@
 /* FOOTER PAGE */
 #page_footer {
     width: 100%;
-    font-weight: 600;
+    margin-top: 40px;
+    padding: 35px 8% 20px;
+
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-primary);
+
     font-family: "JetBrains Mono", monospace;
     text-align: center;
-    margin-top: 40px;
-    padding: 20px 0 5px 0;
-    font-size: clamp(10px, 2vw, 16px);
-    background-color: var(--bg-soft);
+
+    box-sizing: border-box;
 }
 
-/* FOOTER TEXT */
+/* FOOTER MAIN TEXT */
 .footer-text {
+    margin: 0 0 30px;
     font-weight: 600;
-    font-family: "JetBrains Mono", monospace;
-    font-size: clamp(10px, 2vw, 16px);
-    margin-bottom: 15px;
+    font-size: clamp(11px, 1.5vw, 15px);
+    color: var(--text-secondary);
+}
+
+/* FOOTER CONTENT */
+#page_footer h3 {
+    margin: 0 0 12px;
+    font-size: clamp(13px, 1.5vw, 16px);
+    color: var(--text-main);
+}
+
+/* SOCIAL LINKS */
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* LINKS ICONS */
+#links {
+    display: flex;
+    gap: 30px;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.linksicons {
+    width: clamp(28px, 5vw, 35px);
+    height: clamp(28px, 5vw, 35px);
+    color: var(--accent-links);
+    display: block;
+}
+
+/* TECHNOLOGIES TEXT */
+#page_footer > p:last-child {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: clamp(10px, 1.3vw, 14px);
+}
+
+/* FOOTER CONTENT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* SOCIAL SECTION */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social > p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* SOCIAL LINKS */
+#links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#links a {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--accent-links);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+#links a:hover {
+    color: var(--accent-hover);
+}
+
+/* TECHNOLOGIES */
+.footer-tech {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: clamp(10px, 1.3vw, 14px);
+    text-align: right;
 }

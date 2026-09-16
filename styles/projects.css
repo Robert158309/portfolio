@@ -102,13 +102,3 @@
     opacity: 0.8;
     transition: 0.3s;
 }
-
-footer {
-    width: 100%;
-    font-weight: 600;
-    font-family: "JetBrains Mono", monospace;
-    text-align: center;
-    padding: 10px;
-    font-size: clamp(10px, 2vw, 16px);
-    background-color: var(--bg-soft);
-}

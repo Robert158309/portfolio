@@ -2,7 +2,7 @@
 @media (max-width: 768px) {
 
     .header {
-        min-height: 95vh;
+        min-height: 100vh;
         padding: 20px;
     }
 
@@ -150,4 +150,18 @@
         max-height: 300px;
     }
 
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 700px) {
+
+    .footer-social {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
