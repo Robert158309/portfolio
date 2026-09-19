@@ -222,6 +222,7 @@
 
 /* SOCIAL LINKS */
 #links {
+    flex: 1;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -230,7 +231,7 @@
 #links a {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: clamp(10px, 1.3vw, 14px);
     line-height: 1;
     color: var(--accent-links);
     text-decoration: none;
@@ -243,6 +244,7 @@
 
 /* TECHNOLOGIES */
 .footer-tech {
+    flex: 1;
     margin: 0;
     color: var(--text-muted);
     font-size: clamp(10px, 1.3vw, 14px);

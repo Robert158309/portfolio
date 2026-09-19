@@ -54,7 +54,6 @@
     ),
     #080b10;
     --bg-card: #151c27;
-    --bg-card-hover: #1b2533;
     --bg-navbar: #0b1018e6;
     --bg-soft: #1017223f;
 
@@ -71,14 +70,6 @@
 
     /* SPECIAL */
     --accent-gold: #d4a72c;
-
-    /* BORDERS */
-    --border-primary: #243247;
-    --border-accent: #315d9c;
-
-    /* EFFECTS */
-    --shadow-primary: #3b82f633;
-    --shadow-card: #00000066;
 }
 
 html {

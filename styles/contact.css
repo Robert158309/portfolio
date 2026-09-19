@@ -33,23 +33,12 @@
 
 /* FORM */
 fieldset {
-    border: 2px solid var(--accent-badges-link);
-    border-radius: 4px;
-    padding: 20px;
+    border: none;
+    padding: 5px;
     width: 100%;
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
-}
-
-legend {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-family: "JetBrains Mono", monospace;
-    padding: 10px 20px;
-    border: 2px solid var(--accent-badges-link);
-    border-radius: 5px;
 }
 
 fieldset form {
@@ -60,20 +49,22 @@ fieldset form {
 
 fieldset input {
     padding: 10px;
-    border: 1px solid var(--borders);
+    border: none;
     border-radius: 5px;
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    background-color: var(--bg-navbar);
 }
 
 fieldset textarea {
     padding: 10px;
-    border: 1px solid var(--borders);
+    border: none;
     border-radius: 5px;
     font-size: 16px;
     height: 150px;
     resize: none;
     font-family: "Inter", sans-serif;
+    background-color: var(--bg-navbar);
 }
 
 fieldset button {
